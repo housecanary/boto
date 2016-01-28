@@ -119,7 +119,7 @@ class Query(object):
 
         if self.expr:
             for k, v in six.iteritems(self.expr):
-                params['expr.%s' % k] = v
+                params['%s' % k] = v
 
         if self.facet:
             for k, v in six.iteritems(self.facet):
@@ -167,7 +167,7 @@ class Query(object):
         if self.expr:
             expr = {}
             for k, v in six.iteritems(self.expr):
-                expr['expr.%s' % k] = v
+                expr['%s' % k] = v
 
             params['expr'] = expr
 
